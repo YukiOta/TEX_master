@@ -1,0 +1,102 @@
+\documentclass[12pt,a4paper]{jsarticle}
+%package%{{{
+\usepackage{amsmath,amssymb}
+\usepackage{bm}
+\usepackage[dvipdfmx]{graphicx}
+\usepackage{ascmac}
+\usepackage{fancybox}
+\usepackage{verbatim}
+\usepackage{listings,jlisting}
+%%}}}
+%画像を他の場所に保存する場合のpath
+\graphicspath{{./photos/}}
+%layout%{{{
+\setlength{\textwidth}{\fullwidth}
+\setlength{\textheight}{37\baselineskip}
+\addtolength{\textheight}{\topskip}
+\setlength{\voffset}{-0.2in}
+\setlength{\topmargin}{0pt}
+\setlength{\headheight}{0pt}
+\setlength{\headsep}{0in}
+%%}}}
+%renewcommands%{{{
+\makeatletter
+\renewcommand{\theequation}{\thesection.\arabic{equation}}
+\@addtoreset{equation}{section}
+\renewcommand{\figurename}{Figure }
+\renewcommand{\thefigure}{\thesection.\arabic{figure}}
+\@addtoreset{figure}{section}
+\renewcommand{\tablename}{Table }
+\renewcommand{\thetable}{\thesection.\arabic{table}}
+\@addtoreset{table}{section}
+\renewcommand{\theequation}{\thesection.\arabic{equation}}
+\@addtoreset{equation}{section}
+\makeatother
+%%}}}
+%%Command%{{{
+\newcommand{\automath}[1]{\begin{math}#1\end{math}}
+\newcommand{\autoequation}[1]{
+	\begin{equation}
+		\begin{center}
+			#1
+		\end{center}
+	\end{equation}
+	}
+\newcommand{\autoeqnarray}[1]{
+	\begin{eqnarray}
+		\begin{center}
+			#1
+		\end{center}
+	\end{eqnarray}
+	}
+\newcommand{\autofigure}[4][width=12cm]{
+	\begin{figure}[h]
+		\centering
+			\includegraphics[#1]{#2}
+		\caption{#3}
+		\label{#4}
+	\end{figure}}
+\newcommand{\manualfigure}[2]{
+	\begin{figure}[h]
+	\begin{center}
+		\includegraphics{#1}\\#2
+	\end{center}
+	\end{figure}}%}}}
+%listings,jlisting%{{{
+%コード挿入の設定
+\renewcommand{\lstlistingname}{List}
+\lstset{
+	language={C},
+	basicstyle={\small},%
+	identifierstyle={\small},%
+	commentstyle={\small\itshape},%
+	keywordstyle={\small\bfseries},%
+	ndkeywordstyle={\small},%
+	stringstyle={\small\ttfamily},
+	frame={tb},
+    breaklines=true,
+    columns=[l]{fullflexible},%
+    numbers=left,%
+    xrightmargin=3zw,%
+    xleftmargin=3zw,%
+    numberstyle={\scriptsize},%
+    stepnumber=1,
+    numbersep=1zw,%
+    lineskip=-0.5ex%
+	}
+%%}}}
+%\title{サーボ系(信号処理と制御)}
+%\author{}
+%\date{}
+%%
+\begin{document}
+%\maketitle
+\section{セクション1}
+\subsection{セクション2}
+\subsubsection{サブサブセクション3}
+
+
+\begin{thebibliography}{9}%{{{
+		\bibitem{hoge} 著者，著作名，ページなど　%\cite{hoge}でリンク的な
+	\end{thebibliography}%}}}
+\end{document}
