@@ -1,0 +1,70 @@
+\documentclass[a4paper,10pt]{ltjsarticle}
+\usepackage{fancyhdr}
+\usepackage[dvipdfmx]{graphicx}
+\usepackage{hyperref}
+\usepackage{pxjahyper}
+\usepackage{ascmac}
+\usepackage{fancybox}
+\usepackage{amsmath,amssymb}
+\usepackage{amsfonts}
+\usepackage{bm}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage{url}
+%\usepackage[top=40truemm,bottom=35truemm,left=40truemm,right=30truemm]{geometry}
+\usepackage[
+bibstyle = ieee,
+]{biblatex}
+% \nocite{*}
+% \addbibresource{./source/bachelor_thesis_2017.bib}
+
+\graphicspath{{./graphics/}}
+\newcommand{\Alref}[1]{Algorithm~\ref{#1}}
+\newcommand{\Equref}[1]{式~(\ref{#1})}
+\newcommand{\Figref}[1]{図~\ref{#1}}
+\newcommand{\mb}{\mathbf}
+\newcommand{\mr}{\mathrm}
+\DeclareMathOperator*{\argmin}{arg\,min}
+\DeclareMathOperator*{\argmax}{arg\,max}
+
+% \bibliographystyle{junsrt}
+% \renewcommand{\bibname}{参考文献}
+
+% \def\name{1Y13F023 太田裕貴}
+% \def\ttl{魚眼画像に対する\\畳み込みニューラルネットワークの応用}
+
+\title{エルゴード理論について}
+\author{早稲田大学 先進理工学研究科\\電気・情報生命工学科4年}
+\date{\today}
+
+% -------------- PAGE STYLE SETTINGS ---------------
+\pagestyle{fancy}
+\cfoot{\thepage}                          % フッター中央
+\renewcommand{\headrulewidth}{0pt}        % ヘッダの線の太さ:0ptで消える
+\renewcommand{\footrulewidth}{0pt}
+% \rhead{研究会 201X年 X月 X日 苗字 名前}   % ヘッダの右側
+
+% -------------- マージン設定 ----------------------
+\setlength{\oddsidemargin}{-.1in}         % 奇数ページ左余白(設定値+1in)
+\setlength{\evensidemargin}{-.1in}        % 偶数ページ左余白(設定値+1in)
+\setlength{\topmargin}{-4em}              % 上余白(設定値+1in)
+\setlength{\textwidth}{6.5in}             % 本文部分の幅
+\setlength{\textheight}{10in}             % 本文部分の高さ
+
+% ------------ PAGE STYLE SETTINGS END --------------
+
+\begin{document}
+
+\maketitle
+
+これはテンプレートです．
+
+
+% \bibliographystyle{jplain}
+% \bibliography{./source/bachelor_thesis_2017}
+\printbibliography[title=参考文献]
+
+% \include{appendix}
+
+\end{document}
+
