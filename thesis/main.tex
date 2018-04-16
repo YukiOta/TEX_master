@@ -1,0 +1,97 @@
+\documentclass[a4paper,10pt,twoside,openany]{ltjreport}
+\usepackage{fancyhdr}
+\usepackage[dvipdfmx]{graphicx}
+\usepackage[
+	bookmarks=true,%
+	bookmarksnumbered=true,%
+	colorlinks=true,%
+	linkcolor=blue,%
+	citecolor=blue,
+	setpagesize=false]{hyperref}
+\usepackage{pxjahyper}
+\usepackage{ascmac}
+\usepackage{fancybox}
+\usepackage{amsmath,amssymb}
+\usepackage{amsfonts}
+\usepackage{bm}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage{url}
+%\usepackage[top=40truemm,bottom=35truemm,left=40truemm,right=30truemm]{geometry}
+\usepackage[
+bibstyle = ieee,
+]{biblatex}
+% \nocite{*}
+\addbibresource{./source/bachelor_thesis_2017.bib}
+
+\graphicspath{{./source/image/}}
+\newcommand{\Alref}[1]{Algorithm~\ref{#1}}
+\newcommand{\Equref}[1]{式~(\ref{#1})}
+\newcommand{\Figref}[1]{図~\ref{#1}}
+\newcommand{\mb}{\mathbf}
+\newcommand{\mr}{\mathrm}
+\newcommand{\autofigure}[4][width=12cm]{\begin{figure}[h]
+		\centering
+			\includegraphics[#1]{#2}
+		\caption{#3}
+		\label{#4}
+	\end{figure}}
+\DeclareMathOperator*{\argmin}{arg\,min}
+\DeclareMathOperator*{\argmax}{arg\,max}
+
+% \bibliographystyle{junsrt}
+% \renewcommand{\bibname}{参考文献}
+
+\def\name{1Y13F023 太田裕貴}
+\def\ttl{全方位画像に対する\\畳み込みニューラルネットワークの応用}
+
+\title{2017年度学士論文\\\ttl}
+\author{早稲田大学 先進理工学部\\電気・情報生命工学科\\情報学習システム研究室\\\leavevmode\\\name}
+\date{\today}
+
+% -------------- PAGE STYLE SETTINGS ---------------
+\pagestyle{fancy}
+\fancyhead{}
+\fancyhead[RO,RE]{\rightmark}
+\fancyhead[LE,LO]{\leftmark}
+\fancyfoot{}
+\fancyfoot[LE,RO]{\thepage}
+\renewcommand{\chaptermark}[1]{\markboth{第\ \thechapter\ 章~#1}{}}
+\renewcommand{\sectionmark}[1]{\markright{\thesection~#1}{}}
+
+\setlength{\hoffset}{-0.0in}
+\setlength{\voffset}{5.0mm}
+\setlength{\textheight}{580pt}
+\setlength{\oddsidemargin}{12.4mm}% 20mm - 1in
+\setlength{\evensidemargin}{10.4mm}% 20mm - 1in
+\setlength{\textwidth}{135mm}
+\setlength{\headwidth}{145mm}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+% ------------ PAGE STYLE SETTINGS END --------------
+
+\begin{document}
+
+\maketitle
+
+
+\tableofcontents
+% \listoftables
+% \listoffigures
+
+
+% \include{1_intro}
+% \include{2_related_work}
+% \include{3_theory}
+% \include{4_experiment}
+% \include{5_conclusion}
+% \include{experiment}
+% \include{conclusion}
+
+% \bibliographystyle{jplain}
+% \bibliography{./source/bachelor_thesis_2017}
+\printbibliography[title=参考文献]
+
+% \include{appendix}
+
+\end{document}
